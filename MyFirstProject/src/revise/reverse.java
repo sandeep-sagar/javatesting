@@ -58,6 +58,18 @@ public class reverse {
 			System.out.println();
 		}
 	}
+	public static void swap() {
+		int a=10;
+		int b=20;
+		int temp;
+		System.out.println("original val of a: "+a);
+		System.out.println("originalva f b: "+ b);
+		temp=a;
+		a=b;
+		b=temp;
+		System.out.println("Changed value of a: "+a);
+		System.out.println("Changed value of b: "+b);
+	}
 	public static void main(String[] args) {
 		reverse rev = new reverse();
 		rev.revTri();
@@ -67,5 +79,7 @@ public class reverse {
 		rev.diagSq();
 		System.out.println();
 		rev.revDiag();
+		System.out.println();
+		rev.swap();
 		}
 }
