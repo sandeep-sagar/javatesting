@@ -46,6 +46,18 @@ public class reverse {
 			System.out.println();
 		}
 	}
+	public static void revDiag() {
+		for(int i = 0; i <= 4; i++) {
+			for(int j = 0; j <= 4; j++) {
+				if(i == 0 || j == 0 || i == 4 || j == 4 || j == 4-i) {
+					System.out.print("*");
+				} else {
+					System.out.print("-");
+				}
+			}
+			System.out.println();
+		}
+	}
 	public static void main(String[] args) {
 		reverse rev = new reverse();
 		rev.revTri();
@@ -53,6 +65,7 @@ public class reverse {
 		rev.revAltTri();
 		System.out.println();
 		rev.diagSq();
+		System.out.println();
+		rev.revDiag();
 		}
-
 }
