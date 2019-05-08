@@ -59,14 +59,25 @@ public class reverse {
 		}
 	}
 	public static void swap() {
-		int a=10;
-		int b=20;
+		int a = 10;
+		int b = 20;
 		int temp;
 		System.out.println("original val of a: "+a);
 		System.out.println("originalva f b: "+ b);
-		temp=a;
-		a=b;
-		b=temp;
+		temp = a;
+		a = b;
+		b = temp;
+		System.out.println("Changed value of a: "+a);
+		System.out.println("Changed value of b: "+b);
+	}
+	public static void arithSwap() {
+		int a = 10;
+		int b = 20;
+		System.out.println("original val of a: "+a);
+		System.out.println("originalva f b: "+ b);
+		a = a+b;
+		b = a-b;
+		a = a-b;
 		System.out.println("Changed value of a: "+a);
 		System.out.println("Changed value of b: "+b);
 	}
@@ -81,5 +92,7 @@ public class reverse {
 		rev.revDiag();
 		System.out.println();
 		rev.swap();
+		System.out.println();
+		rev.arithSwap();
 		}
 }
