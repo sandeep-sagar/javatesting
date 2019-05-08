@@ -1,20 +1,20 @@
 package revise;
 
 public class reverse {
-public static void revTri() {
-	for(int i = 0; i <= 3; i++) {
-		for(int j = 0; j <= 6; j++) {
-			int end = 6;
-			int start = end - i;
-			if(j <= start && j >= i) {
-				System.out.print("*");
-			}else {
-				System.out.print("-");
+	public static void revTri() {
+		for(int i = 0; i <= 3; i++) {
+			for(int j = 0; j <= 6; j++) {
+				int end = 6;
+				int start = end - i;
+				if(j <= start && j >= i) {
+					System.out.print("*");
+				}else {
+					System.out.print("-");
+				}
 			}
+			System.out.println();
 		}
-		System.out.println();
 	}
-}
 	public static void revAltTri() {
 		for(int i = 0; i <=3; i++) {
 			int flag = 0;
@@ -34,11 +34,25 @@ public static void revTri() {
 			System.out.println();
 		}
 	}
+	public static void diagSq() {
+		for(int i = 0; i <= 4; i++) {
+			for(int j = 0; j <= 4 ; j++) {
+				if(i == 0 || j== 0 ||i == 4 || j == 4 || i == j) {
+					System.out.print("*");
+				} else {
+					System.out.print("-");
+				}
+			}
+			System.out.println();
+		}
+	}
 	public static void main(String[] args) {
 		reverse rev = new reverse();
 		rev.revTri();
 		System.out.println();
-		rev.revAltTri();		
-	}
+		rev.revAltTri();
+		System.out.println();
+		rev.diagSq();
+		}
 
 }
